@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Proyect</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md" style="background-color: #d87ffe;" id="home">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#home"> NM <img width="25" src="imágenes/logo.png" alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav">
+                <span class="icon-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="myNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-md-4">
+                        <a class="nav-link" href="#sobremi">Sobre mí</a>
+                    </li>
+
+                    <li class="nav-item px-md-4">
+                        <a class="nav-link " href="#trabajos">Trabajos</a>
+                    </li> 
+
+                    <li class="nav-item px-md-4">
+                      <a class="nav-link" href="#contacto">Contacto</a>
+                  </li> 
+            </div>
+        </div>
+    </nav>
+
+
+    <header  class="bg-image"></header>
+
+    <main>
+      <section id="sobremi">
+        <div data-aos="fade-up"class="container-md mt-5">
+          <h2>Sobre mi</h2>
+          <p>Hola, soy Nazarena y soy diseñadora.</p>
+          <p>Me interesa mucho la tecnología y crear nuevos mundos a través de las imágenes. Trabajo haciendo modelados 3d en Bleder. Estos son mis trabajos en 3d para proyectos de diseño gráfico, objetual y audiovisual.</p>
+      </div>
+    </section>
+
+<section id="trabajos">
+      <div class="container mt-5">
+          <div class="row justify-content-lg-between justify-content-center">
+
+      <div data-aos="fade-up" class="col-md-6 col-lg-4 p-3">
+         <a href="imágenes/t1.jpg" data-lightbox="image-set" data-title="Trabajo 1"><img class="img-fluid" src="imágenes/t1.jpg" alt="Trabajo1"></a></div>
+      <div data-aos="fade-up" class="col-md-6 col-lg-4 p-3"> 
+        <a href="imágenes/t2.jpg" data-lightbox="image-set" data-title="Trabajo 2"><img class="img-fluid" src="imágenes/t2.jpg" alt="Trabajo2"></a></div>
+      <div data-aos="fade-up" class="col-md-6 col-lg-4 p-3"> 
+        <a href="imágenes/t3.jpg" data-lightbox="image-set" data-title="Trabajo 3"><img class="img-fluid" src="imágenes/t3.jpg" alt="Trabajo3"></a></div>
+      <div data-aos="fade-up" class="col-md-6 col-lg-4 p-3"> 
+        <a href="imágenes/t4.jpg" data-lightbox="image-set" data-title="Trabajo 4"><img class="img-fluid" src="imágenes/t4.jpg" alt="Trabajo4"></a></div>
+      <div data-aos="fade-up" class="col-md-6 col-lg-4 p-3">
+        <a href="imágenes/t5.jpg" data-lightbox="image-set" data-title="Trabajo 5"><img class="img-fluid" src="imágenes/t5.jpg" alt="Trabajo3"></a></div>
+      <div data-aos="fade-up" class="col-md-6 col-lg-4 p-3">
+        <a href="imágenes/t6.jpg" data-lightbox="image-set" data-title="Trabajo 6"><img class="img-fluid" src="imágenes/t6.jpg" alt="Trabajo3"></a></div>
+
+      </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+  AOS.init();
+</script>
+
+    <section id="contacto">
+      <div class="container-md mt-5" >
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-md-12 ">
+                <h2>¿Te gustó mi trabajo?</h2>
+                <p>Me encantaría que me escribieras.<br> Cualquier consulta, no dudes en mandarme!</p>
+
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Escribir
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Escribime tu consulta!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="php/code.php"  method="post">
+                              <div class="form-group pt-2">
+                                  <label for="exampleInputEmail1">Nombre</label>
+                                  <input name="nombre" type="text" class="form-control">
+
+                                  <div class="valid-feedback">
+                                    Tu nombre parece correcto :)
+                                  </div>
+                
+                                  <div class="invalid-feedback">Tu nombre no parece correcto :(</div>
+                                </label>
+                              </div>
+
+                              <div class="form-group mt-2">
+                                  <label class="form-label">Email</label>
+                                  <input name="email" type="email" class="form-control">
+                                  <div class="valid-feedback">
+                                    Tu email parece correcto :)
+                                  </div>
+                  
+                                  <div class="invalid-feedback">Tu mail no parece correcto, recuerda incluir "@"</div>
+                          
+                              </div>
+
+                              <div class="form-group mt-2">
+                                  <label>Mensaje:</label>
+                                  <textarea name="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+
+                          </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-dark">Enviar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+            </div>
+            <div class= "col-lg-5 col-md-12 mt-5">
+              <div class="container ">
+      
+                <!-- <video class="img-fluid" src="video/video.mp4" autoplay loop></video> -->
+                <video controls muted autoplay loop src="video/video.mp4" class="img-fluid" id="video"></video>
+                
+              </div>
+            
+        </div>
+    </div>
+  </section>
+
+  
+   
+    </main>
+
+    <footer></footer>
+    <script> 
+      var video = document.getElementById("video");
+      function reload() { 
+   video.load(); 
+}
+
+</script> 
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
+
+    <script>
+      lightbox.option({
+          'wrapAround': true,
+          'positionFromTop': 200,
+          'resizeDuration': 2000,
+          'albumLabel':	"Imagen %1 de 6"
+      })
+  </script>
+
+    </body>
+    </html>
+                    
+
